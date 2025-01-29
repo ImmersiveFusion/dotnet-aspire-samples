@@ -70,16 +70,11 @@ namespace AspireShop.BasketBus
                     AddMessagingTags(activity);
                     
                     await ProcessAsync(payload!);
-
-                    Console.WriteLine($" [x] Received {json}");
                 }
                 catch (Exception ex)
                 {
                     _logger.LogError(ex, "Message processing failed.");
                 }
-
-
-
             });
         }
 
